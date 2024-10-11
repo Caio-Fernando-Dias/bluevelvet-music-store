@@ -1,11 +1,13 @@
 public class Fatorial {
-	//Versão iterativa do cálculo do fatorial
-	public int calcularFatorial(int n){
-		int resultado = 1;
-		
-		for(int i = 1; i <= n; i++){
-			resultado *= i;
-		}
-		return resultado;
-	}
+    public int calcularFatorial(int n) throws IllegalArgumentException {
+        if (n < 0) {
+            throw new IllegalArgumentException("não existe fatorial de números negativos");
+        }
+        
+        int fatorial = 1;
+        for (int i = 1; i <= n; i++) {
+            fatorial *= i;
+        }
+        return fatorial;
+    }
 }
